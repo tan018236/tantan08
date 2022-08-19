@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+     *{
+        margin: 0;
+        padding: 0px;
+        box-sizing: border-box;
+     }
+
+     .header{
+        height: 70px;
+        width: 100%;
+        background-color: gray;
+     }
+
+     .carousel{
+        width:100%;
+        height: 800px;
+        /* background-color: red; */
+        overflow: hidden;
+        position: relative;
+     }
+     .slider{
+        height: 800px;
+        /* background-color: green; */
+        width: 600%;
+        display: flex;
+        margin-left: -100%;
+     }
+
+     .slider_child{
+         height: 800px;
+         width: calc(100%/6);
+         /* background-color: yellow; */
+         overflow: hidden;
+     }
+     .buttons{
+        width: 100%;
+        height: 70px;
+        /* background-color: black; */
+        position: absolute;
+        top: 365px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        padding-left: 30px;
+        padding-right: 30px;
+     }
+     .move_button{
+        width: 70px;
+        height: 70px;
+        background-color: rgba(0,0,0,0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-weight: bold;
+        border-radius: 50%;
+        color: white;
+        cursor: pointer;
+     }
+  
+     .slider_child > img{
+      width: 100%;
+     }
+
+     .indicators{
+      width: 100%;
+      height: 15px;
+      /* background-color: red; */
+      position: absolute;
+      bottom: 2%; 
+      display: flex; 
+      justify-content: center;
+      column-gap: 10px;
+
+   }
+    .indicators :active{background-color: white;}
+   .active{background-color: white;}
+   p{
+      width: 15px;
+      height: 15px;
+      background-color: white;
+      border-radius: 50%;
+      background-color:gray;
+   }
+
+    </style>
+</head>
+<body>
+   
+    <header class="header">
+
+    </header>
+
+    <section class="carousel">
+
+   <div class="buttons">
+        
+   <div class="move_button" onclick="prevSlide()">
+    <i class="fa-solid fa-angle-left"></i>
+   </div>
+
+   <div class="move_button" onclick="nextSlide()">
+    <i class="fa-solid fa-angle-right"></i>
+</div>
+
+   </div>
+ 
+   <div class="indicators">
+      
+      <p onclick="moveToslide(1)" class="active"></p>
+      <p onclick="moveToslide(2)"></p>
+      <p onclick="moveToslide(3)" ></p>
+      <p onclick="moveToslide(4)"></p>
+      <p onclick="moveToslide(5)"></p>
+
+   </div>
+
+       <div class="slider">
+         
+         <div class="slider_child">
+            <img src="https://images.pexels.com/photos/13248572/pexels-photo-13248572.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" 
+            alt="">
+         </div>
+         <div class="slider_child">
+            <img src="https://images.pexels.com/photos/12747521/pexels-photo-12747521.png?auto=compress&cs=tinysrgb&w=600&lazy=load"
+             alt="">
+       </div>
+         <div class="slider_child">
+             <img src="https://images.pexels.com/photos/12988678/pexels-photo-12988678.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" 
+             alt="">
+        </div>
+        <div class="slider_child">
+             <img src="https://images.pexels.com/photos/13248509/pexels-photo-13248509.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" 
+             alt="">
+        </div>
+        <div class="slider_child">
+             <img src="https://images.pexels.com/photos/13248572/pexels-photo-13248572.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" 
+             alt="">
+        </div>
+        <div class="slider_child">
+         <img src="https://images.pexels.com/photos/12747521/pexels-photo-12747521.png?auto=compress&cs=tinysrgb&w=600&lazy=load" 
+         alt="">
+   
+        </div>
+
+       </div>
+
+    </section>
+
+    <script src="boot.js"></script>
+</body>
+</html>
